@@ -16,10 +16,10 @@
         </a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" href="./user.html">
+        <%= link_to edit_user_path(:id), class: "nav-link" do %>
           <i class="material-icons">account_circle</i>
-          <p>User Profile</p>
-        </a>
+            <p>User Profile</p>
+        <% end %> 
       </li>
       <li class="nav-item ">
         <a class="nav-link" href="./tables.html">
