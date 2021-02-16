@@ -37,9 +37,11 @@
           </div>
         </li> %>
         <li class="nav-item">
-          <%= link_to edit_user_path(:id), class: "nav-link" do %>
-            <i class="material-icons">account_circle</i> ユーザー名が入ります
-          <% end %> 
+          <% if user_signed_in? %>
+            <%= link_to edit_user_path(current_user.id), class: "nav-link" do %>
+              <i class="material-icons">account_circle</i> <%=current_user.name %>
+            <% end %> 
+          <% end %>
         </li>
         <li class="nav-item">
           <%= link_to destroy_user_session_path, method: :delete, class: "nav-link" do %>

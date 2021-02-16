@@ -8,21 +8,35 @@
       <div class="card-body">
         <form>
           <div class="row">
-            <div class="col-md-6">
-              <div class="form-group">
-                <label class="bmd-label-floating">name</label>
-                <input type="text" class="form-control">
+            <%= form_with model: current_user, method: :put, local: true do |f| %>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <div class="bmd-label-floating">
+                    <%= f.label :name%>
+                  </div>
+                  <div class='form-control'>
+                    <%= f.text_field :name, style: "border: none", autofocus: true%>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <label class="bmd-label-floating">Email address</label>
-                <input type="email" class="form-control">
+              <div class="col-md-12">
+                <div class="form-group">
+                 <div class="bmd-label-floating">
+                    <%= f.label :email%>
+                  </div>
+                  <div class='form-control'>
+                    <%= f.text_field :email, style: "border: none", autofocus: true%>
+                  </div>
+                </div>
               </div>
-            </div>
+              <div class='btn btn-primary pull-right'>
+                <%= f.submit "Update", class: 'btn btn-primary pull-right'%>
+              </div>
+            <% end %>
+            <div class="clearfix"></div>
           </div>
           
-          <div class="row">
+          <%# <div class="row">
             <div class="col-md-12">
               <div class="form-group">
                 <label>About Me</label>
@@ -32,9 +46,9 @@
                 </div>
               </div>
             </div>
-          </div>
-          <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
-          <div class="clearfix"></div>
+          </div> %>
+          <%# <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
+          <div class="clearfix"></div> %>
         </form>
       </div>
     </div>
