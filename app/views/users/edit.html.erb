@@ -8,7 +8,7 @@
       <div class="card-body">
         <form>
           <div class="row">
-            <%= form_with model: current_user, method: :put, local: true do |f| %>
+            <%= form_with model: current_user, url: user_registration_path, method: :patch, local: true do |f| %>
               <div class="col-md-12">
                 <div class="form-group">
                   <div class="bmd-label-floating">
