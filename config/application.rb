@@ -15,12 +15,6 @@ module Teamlabo2
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
-    Rails.application.config.assets.paths << Rails.root.join('config')
-    Rails.application.config.assets.paths << Rails.root.join('demo')
-    Rails.application.config.assets.paths << Rails.root.join('images')
-    Rails.application.config.assets.paths << Rails.root.join('img')
-    Rails.application.config.assets.paths << Rails.root.join('js')
-    Rails.application.config.assets.paths << Rails.root.join('scss')
-    Rails.application.config.assets.paths << Rails.root.join('stylesheets')
+
   end
 end
