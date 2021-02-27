@@ -5,15 +5,13 @@
 |name                     |string      |null: false                     |
 |email                    |string      |null: false, unique: true       |
 |encrypted_password       |string      |null: false                     |
-|team_id                  |references  |null: false, foreign_key: true  |
+
 ### Association
 
-has_many :teams, through: :team_users
-has_many :team_users
-has_many :posts
-has_many :comments
-
-
+- has_many :team_users
+- has_many :teams, through: :team_users
+- has_many :posts
+- has_many :comments
 
 
 
@@ -25,10 +23,8 @@ has_many :comments
 |team_id                  |references |null: false, foreign_key: true   |
 
 ### Association
-belongs_to :user
-belongs_to :team
-
-
+- belongs_to :user
+- belongs_to :team
 
 
 
@@ -37,18 +33,13 @@ belongs_to :team
 |Colum                    |Type       |Options                          | 
 |-------------------------|-----------|---------------------------------|
 |name                     |string     |null: false                      |
-|user_id                  |references |null: false, foreign_key: true   |
+|name                     |index      |unique: true                     |
 
 
 ### Association
-has_many :users, through: :team_users
-has_many :team_users
-has_many :posts
-
-
-
-
-
+- has_many :team_users
+- has_many :users, through: :team_users
+- has_many :posts
 
 
 
@@ -56,19 +47,14 @@ has_many :posts
 
 |Colum                    |Type       |Options                          | 
 |-------------------------|-----------|---------------------------------|
-|date                     |date       |null: false                      |
 |text                     |text       |null: false                      |
 |user_id                  |references |null: false, foreign_key: true   |
 |team_id                  |references |null: false, foreign_key: true   |
 
 ### Association
-belongs_to :user
-belongs_to :team
-has_many :comments
-
-
-
-
+- belongs_to :user
+- belongs_to :team
+- has_many :comments
 
 
 
@@ -82,9 +68,9 @@ has_many :comments
 |post_id                  |references |null: false, foreign_key: true   |
 
 ### Association
-belongs_to :user
-belongs_to :post, dependent: :destroy
-has_many :comments
+- belongs_to :user
+- belongs_to :post, dependent: :destroy
+- has_many :comments
 
 
 
