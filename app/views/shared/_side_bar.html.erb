@@ -50,10 +50,10 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="./notifications.html">
+        <%= link_to new_team_path, class: "nav-link" do%>
           <i class="material-icons">add_box</i>
           <p>チーム新規作成</p>
-        </a>
+        <% end %>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="./rtl.html">
@@ -62,10 +62,10 @@
         </a>
       </li>
       <li class="nav-item active-pro ">
-        <a class="nav-link" href="./upgrade.html">
+        <%= link_to new_team_path, class: "nav-link" do%>
           <i class="material-icons">unarchive</i>
           <p>チーム名</p>
-        </a>
+        <% end %>
       </li>
     </ul>
   </div>

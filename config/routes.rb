@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get 'dashboard/index'
   root to: "dashboard#index"
   resources :users, only: [:edit, :update, :show]
+  resources :teams, only: [:new, :create, :edit, :update]
 end
